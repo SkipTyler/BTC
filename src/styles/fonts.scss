@@ -1,0 +1,21 @@
+@mixin fontface($name, $file, $weight, $style){
+	@font-face {
+		font-family: "#{$name}";
+		font-weight: $weight;
+		font-style: $style;
+		src: url('../fonts/#{$file}.eot');
+		src: url('../fonts/#{$file}.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/#{$file}.woff') format('woff'),
+		url('../fonts/#{$file}.ttf') format('truetype'),
+		url('../fonts/#{$file}.svg?#webfont') format('svg');
+	}
+}
+
+@include fontface(MachineC,MachineC,400,normal)
+@include fontface(Raleway,Raleway-Black,900,normal)
+@include fontface(Raleway,Raleway-ExtraBold,800,normal)
+@include fontface(Raleway,Raleway-Medium,500,normal)
+@include fontface(Raleway,Raleway-Regular,400,normal)
+@include fontface(Raleway,Raleway-SemiBold,600,normal)
+@include fontface(Roboto,Roboto-Light,300,normal)
+@include fontface(Roboto,Roboto-Regular,400,normal)
