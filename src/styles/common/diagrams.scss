@@ -1,0 +1,140 @@
+// circle variables
+$big-diameter: 570px;
+$small-diameter: 310px;
+$PI: 3.1415926535;
+$circle-radius: $big-diameter / 4;
+$circumference: 2 * $PI;
+$dasharray-big-value: $circumference *$big-diameter / 4;
+$dasharray-small-value: $circumference * $small-diameter / 4;
+
+.diagrams {
+  padding: 150px 50px 0;
+  @media only screen and (max-width: 1024px) {
+    padding-top: 50px;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .diagrams_image {
+    position: relative;
+    width: 50%;
+
+    span {
+      position: absolute;
+      color: #ffffff;
+      font-family: $ff-Roboto;
+      font-size: 24px;
+      @media only screen and (max-width: 1024px) {
+        font-size: 22px;
+      }
+    }
+
+    span:nth-of-type(1) {
+      top: 248px;
+      left: 315px;
+      @media only screen and (max-width: 1024px) {
+        top: 120px;
+        left: 175px;
+      }
+    }
+
+    span:nth-of-type(2) {
+      top: 330px;
+      left: 315px;
+      @media only screen and (max-width: 1024px) {
+        top: 185px;
+        left: 175px;
+      }
+    }
+
+    span:nth-of-type(3) {
+      top: 340px;
+      left: 225px;
+      font-size: 18px;
+      @media only screen and (max-width: 1024px) {
+        top: 192px;
+        left: 109px;
+        font-size: 16px;
+      }
+    }
+
+    span:nth-of-type(4) {
+      top: 248px;
+      left: 235px;
+      @media only screen and (max-width: 1024px) {
+        top: 120px;
+        left: 109px;
+      }
+    }
+
+    svg {
+      transform: rotate(-90deg);
+      border-radius: 50%;
+      background: #ee8467;
+      box-shadow: 0 6px 64px 9px rgba(0, 0, 0, 0.15);
+      width: $big-diameter;
+      height: $big-diameter;
+      @media only screen and (max-width: 1024px) {
+        height: $small-diameter;
+        width: $small-diameter;
+      }
+
+      circle {
+        fill: none;
+        stroke-width: calc(#{$big-diameter} / 2);
+        r: calc(#{$big-diameter} / 4);
+        cx: 50%;
+        cy: 50%;
+        @media only screen and (max-width: 1024px) {
+          stroke-width: calc(#{$small-diameter} / 2);;
+          r: calc(#{$small-diameter} / 4);
+        }
+      }
+
+      .diagrams_blue {
+        stroke: #4747f6;
+        stroke-dasharray: calc(#{$dasharray-big-value} * 0.3) $dasharray-big-value;
+        @media only screen and (max-width: 1024px) {
+          stroke-dasharray: calc(#{$dasharray-small-value} * 0.3) $dasharray-small-value;
+        }
+      }
+
+      .diagrams_lilac {
+        stroke: #75e4ff;
+        stroke-dashoffset: calc(-#{$dasharray-big-value} * 0.3);
+        stroke-dasharray: calc(#{$dasharray-big-value} * 0.2) $dasharray-big-value;
+        @media only screen and (max-width: 1024px) {
+          stroke-dashoffset: calc(-#{$dasharray-small-value} * 0.3);
+          stroke-dasharray: calc(#{$dasharray-small-value} * 0.2) $dasharray-small-value;
+        }
+      }
+
+      .diagrams_green {
+        stroke: #ffce40;
+        stroke-dashoffset: calc(-#{$dasharray-big-value} * 0.5);
+        stroke-dasharray: calc(#{$dasharray-big-value} * 0.15) $dasharray-big-value;
+        @media only screen and (max-width: 1024px) {
+          stroke-dashoffset: calc(-#{$dasharray-small-value} * 0.5);
+          stroke-dasharray: calc(#{$dasharray-small-value} * 0.15) $dasharray-small-value;
+        }
+      }
+    }
+  }
+
+  .diagrams_desc_right {
+    text-align: right;
+    padding-left: 200px;
+    padding-right: 0;
+    @media only screen and (max-width: 1024px) {
+      padding-left: 50px;
+    }
+
+    h2:after {
+      right: 0;
+      left: auto;
+    }
+  }
+}
