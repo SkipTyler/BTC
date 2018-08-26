@@ -61,6 +61,36 @@ const delegate = (criteria, listener) => {
 	timer('.js-timer', 'July 25, 2019 00:00:00');
 })();
 
+document.addEventListener('DOMContentLoaded', function () {
+	const svg = document.querySelector('.diagrams_image');
+	// const size = parseInt(getComputedStyle(svg).height);
+	// const circles = svg.querySelectorAll('circle');
+	//
+	// for (let circle of circles) {
+    //     circle.setAttribute('r', size / 4);
+    //     circle.setAttribute('cx', size / 2);
+    //     circle.setAttribute('cy', size / 2);
+    //     circle.setAttribute('stroke-dasharray', `${Math.PI * 2 * size / 4 *0.25} ${Math.PI * 2 * size / 4}`);
+    //     circle.setAttribute('stroke-dashoffset', `${Math.PI * 2 * size / 4 *0.25}`);
+    //     circle.setAttribute('stroke-width', `${ size / 4}`);
+	// }
+
+    const dataset = [
+        {
+            value: 5,
+            color: '#dc3912'
+        }, {
+            value: 40,
+            color: '#ff9900'
+        }, {
+            value: 30,
+            color: '#109618'
+        }, {
+            value: 25,
+            color: '#990099'
+        }
+    ];
+});
 // mobile menu
 (() => {
 	const _menuBtn = document.querySelector('.js-menuBtn');
