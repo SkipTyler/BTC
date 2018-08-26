@@ -47,18 +47,26 @@ body {
 	color: #ffffff;
 	padding-left: 0;
 	padding-right: 200px;
+	display: flex;
+	flex-direction: column;
+		@media only screen and (max-width: 1075px) {
+		padding-right: 10px;
+	}
+	@media only screen and (max-width: 680px) {
+		padding: 10px 20px;
+		margin-bottom: 40px;
+	}
 
 	h2 {
 		font: 900 36px $ff-Raleway;
-		position: relative;
-		margin-bottom: 80px;
+		margin-bottom: 25px;
+		@media only screen and (max-width: 480px) {
+			font-size: 32px;
+		}
 	}
 
-	h2:after {
-		position: absolute;
-		content: '';
-		top: 76px;
-		left: 0;
+	.line {
+		margin-bottom: 25px;
 		width: 30px;
 		height: 3px;
 		box-shadow: 0 4px 12px 2px rgba(0, 0, 0, 0.2), 0 0 14px 1px rgba(250, 146, 116, 0.15);
@@ -69,9 +77,28 @@ body {
 	p {
 		font: 500 16px $ff-Raleway;
 		line-height: 24px;
+		@media only screen and (max-width: 480px) {
+			font-size: 14px;
+		}
 	}
 
-	p:first-of-type {
-		margin-bottom: 40px;
+	p:not(:last-of-type) {
+		margin-bottom: 24px;
+	}
+}
+
+.diagrams_desc.head {
+	text-align: center;
+	align-items: center;
+	padding: 50px 250px;
+	@media only screen and (max-width: 1024px) {
+		padding: 50px 100px;
+	}
+	@media only screen and (max-width: 488px) {
+		padding: 50px 10px;
+	}
+
+	h2 {
+		font-size: 60px;
 	}
 }

@@ -1,140 +1,194 @@
-// circle variables
-$big-diameter: 570px;
-$small-diameter: 310px;
-$PI: 3.1415926535;
-$circle-radius: $big-diameter / 4;
-$circumference: 2 * $PI;
-$dasharray-big-value: $circumference *$big-diameter / 4;
-$dasharray-small-value: $circumference * $small-diameter / 4;
-
 .diagrams {
   padding: 150px 50px 0;
   @media only screen and (max-width: 1024px) {
     padding-top: 50px;
   }
+  @media only screen and (max-width: 680px) {
+    padding: 0;
+  }
 
-  .wrapper {
+  .diagrams_item {
     display: flex;
     align-items: center;
+    @media only screen and (max-width: 680px) {
+      flex-direction: column;
+    }
+  }
+
+  .diagrams_item:nth-child(1) {
+    margin-bottom: 100px;
+    @media only screen and (max-width: 680px) {
+      flex-direction: column-reverse;
+      margin-bottom: 50px;
+    }
   }
 
   .diagrams_image {
-    position: relative;
     width: 50%;
+    position: relative;
+    @media only screen and (max-width: 680px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .circle {
+      position: relative;
+      width: 570px;
+      height: 570px;
+      overflow: hidden;
+      border-radius: 50%;
+      background: #ee8467;
+      box-shadow: 0 6px 64px 9px rgba(0, 0, 0, 0.15);
+      @media only screen and (max-width: 1024px) {
+        width: 310px;
+        height: 310px;
+      }
 
-    span {
+      .sector,
+      .diagram_second_sector {
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform-origin: left bottom;
+      }
+
+      .sector:before,
+      .sector:after {
+        position: absolute;
+        color: #ffffff;
+        font-family: $ff-Roboto;
+        font-size: 24px;
+        @media only screen and (max-width: 1024px) {
+          font-size: 22px;
+        }
+      }
+
+      // first sector
+      .sector:nth-of-type(1) {
+        background: #4747f6;
+      }
+
+      .sector:nth-of-type(2) {
+        background: #4747f6;
+        transform: rotate(90deg) skewY(108deg);
+      }
+
+      .sector:nth-of-type(1):before {
+        content: '30';
+        bottom: 21px;
+        left: 31px;
+      }
+
+      // second sector
+      .sector:nth-of-type(3) {
+        background: #75e4ff;
+        transform: rotate(108deg) skewY(185deg);
+      }
+
+      .sector:nth-of-type(3):before {
+        content: '20';
+        transform: rotate(-109deg);
+        bottom: 51px;
+        left: 31px;
+      }
+
+      // third sector
+      .sector:nth-of-type(4) {
+        background: #ffce40;
+        transform: rotate(-180deg) skewY(144deg);
+      }
+
+      .sector:nth-of-type(4):before {
+        content: 'Other';
+        transform: rotate(180deg) skewY(-144deg);
+        bottom: 25px;
+        left: 13px;
+        font-size: 18px;
+      }
+
+      // fourth sector
+      .sector:nth-of-type(4):after {
+        content: '35';
+        transform: rotate(180deg) skewY(-144deg);
+        top: 118%;
+        left: 30px;
+        @media only screen and (max-width: 1024px) {
+          top: 132%;
+          left: 29px;
+        }
+      }
+
+      // second diagram
+
+      // first sector
+      .diagram_second_sector:nth-of-type(1) {
+        background: #4747f6;
+        transform: rotate(30deg);
+      }
+
+      .diagram_second_sector:nth-of-type(2) {
+        background: #4747f6;
+        transform: rotate(90deg) skewY(144deg);
+      }
+    }
+
+    .second-circle:before,
+    .second-circle:after {
       position: absolute;
       color: #ffffff;
       font-family: $ff-Roboto;
       font-size: 24px;
+      z-index: 1;
+      top: 269px;
       @media only screen and (max-width: 1024px) {
-        font-size: 22px;
+        font-size: 20px;
+        top: 144px;
       }
     }
 
-    span:nth-of-type(1) {
-      top: 248px;
-      left: 315px;
+    .second-circle:before {
+      content: 'Other, 40%';
+      left: 339px;
       @media only screen and (max-width: 1024px) {
-        top: 120px;
-        left: 175px;
+        left: 183px;
       }
     }
 
-    span:nth-of-type(2) {
-      top: 330px;
-      left: 315px;
+    .second-circle:after {
+      content: 'Dash, 60%';
+      left: 130px;
       @media only screen and (max-width: 1024px) {
-        top: 185px;
-        left: 175px;
-      }
-    }
-
-    span:nth-of-type(3) {
-      top: 340px;
-      left: 225px;
-      font-size: 18px;
-      @media only screen and (max-width: 1024px) {
-        top: 192px;
-        left: 109px;
-        font-size: 16px;
-      }
-    }
-
-    span:nth-of-type(4) {
-      top: 248px;
-      left: 235px;
-      @media only screen and (max-width: 1024px) {
-        top: 120px;
-        left: 109px;
-      }
-    }
-
-    svg {
-      transform: rotate(-90deg);
-      border-radius: 50%;
-      background: #ee8467;
-      box-shadow: 0 6px 64px 9px rgba(0, 0, 0, 0.15);
-      width: $big-diameter;
-      height: $big-diameter;
-      @media only screen and (max-width: 1024px) {
-        height: $small-diameter;
-        width: $small-diameter;
-      }
-
-      circle {
-        fill: none;
-        stroke-width: calc(#{$big-diameter} / 2);
-        r: calc(#{$big-diameter} / 4);
-        cx: 50%;
-        cy: 50%;
-        @media only screen and (max-width: 1024px) {
-          stroke-width: calc(#{$small-diameter} / 2);;
-          r: calc(#{$small-diameter} / 4);
-        }
-      }
-
-      .diagrams_blue {
-        stroke: #4747f6;
-        stroke-dasharray: calc(#{$dasharray-big-value} * 0.3) $dasharray-big-value;
-        @media only screen and (max-width: 1024px) {
-          stroke-dasharray: calc(#{$dasharray-small-value} * 0.3) $dasharray-small-value;
-        }
-      }
-
-      .diagrams_lilac {
-        stroke: #75e4ff;
-        stroke-dashoffset: calc(-#{$dasharray-big-value} * 0.3);
-        stroke-dasharray: calc(#{$dasharray-big-value} * 0.2) $dasharray-big-value;
-        @media only screen and (max-width: 1024px) {
-          stroke-dashoffset: calc(-#{$dasharray-small-value} * 0.3);
-          stroke-dasharray: calc(#{$dasharray-small-value} * 0.2) $dasharray-small-value;
-        }
-      }
-
-      .diagrams_green {
-        stroke: #ffce40;
-        stroke-dashoffset: calc(-#{$dasharray-big-value} * 0.5);
-        stroke-dasharray: calc(#{$dasharray-big-value} * 0.15) $dasharray-big-value;
-        @media only screen and (max-width: 1024px) {
-          stroke-dashoffset: calc(-#{$dasharray-small-value} * 0.5);
-          stroke-dasharray: calc(#{$dasharray-small-value} * 0.15) $dasharray-small-value;
-        }
+        left: 30px;
       }
     }
   }
 
   .diagrams_desc_right {
+    align-items: flex-end;
     text-align: right;
     padding-left: 200px;
     padding-right: 0;
     @media only screen and (max-width: 1024px) {
       padding-left: 50px;
     }
+    @media only screen and (max-width: 680px) {
+      text-align: left;
+      padding: 10px 20px;
+      margin-bottom: 40px;
+    }
+
+    p {
+      text-align: right;
+    }
 
     h2:after {
       right: 0;
       left: auto;
+      @media only screen and (max-width: 680px) {
+        left: 0;
+      }
     }
   }
 }

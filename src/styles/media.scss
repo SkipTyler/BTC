@@ -1,0 +1,37 @@
+.media {
+  padding: 100px 0;
+  @media only screen and (max-width: 480px) {
+    padding: 50px 0;
+  }
+
+  .wrapper {
+    display: flex;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .media_item {
+      width: 750px;
+      background: #5981f5;
+      @media only screen and (max-width: 768px) {
+        width: 90%;
+      }
+      @media only screen and (max-width: 480px) {
+        width: 100%;
+      }
+
+      .media_item_content {
+        padding-bottom: 51.73%;
+      }
+    }
+
+    .media_item:first-of-type {
+      margin-right: 30px;
+      @media only screen and (max-width: 768px) {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
