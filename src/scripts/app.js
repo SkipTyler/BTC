@@ -62,34 +62,27 @@ const delegate = (criteria, listener) => {
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
-	const svg = document.querySelector('.diagrams_image');
-	// const size = parseInt(getComputedStyle(svg).height);
-	// const circles = svg.querySelectorAll('circle');
-	//
-	// for (let circle of circles) {
-    //     circle.setAttribute('r', size / 4);
-    //     circle.setAttribute('cx', size / 2);
-    //     circle.setAttribute('cy', size / 2);
-    //     circle.setAttribute('stroke-dasharray', `${Math.PI * 2 * size / 4 *0.25} ${Math.PI * 2 * size / 4}`);
-    //     circle.setAttribute('stroke-dashoffset', `${Math.PI * 2 * size / 4 *0.25}`);
-    //     circle.setAttribute('stroke-width', `${ size / 4}`);
-	// }
+    const circles = document.querySelectorAll('.diagrams_image');
+    const OSs = document.querySelectorAll('.cell');
+    const load = document.querySelectorAll('.plan_item_info_loading');
 
-    const dataset = [
-        {
-            value: 5,
-            color: '#dc3912'
-        }, {
-            value: 40,
-            color: '#ff9900'
-        }, {
-            value: 30,
-            color: '#109618'
-        }, {
-            value: 25,
-            color: '#990099'
-        }
-    ];
+    // rotate animation
+    for (let circle of circles) {
+        circle.classList.add('turn');
+    }
+
+    // scale animation
+    for (let OS of OSs) {
+        OS.classList.add('choose');
+    }
+    document.querySelector('.wallet_image').classList.add('choose');
+
+    for (let item of load) {
+        item.classList.add('width');
+    }
+
+    // colors animation
+
 });
 // mobile menu
 (() => {

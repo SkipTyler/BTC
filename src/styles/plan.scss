@@ -1,3 +1,13 @@
+.width {
+  animation: width 4s infinite linear;
+}
+
+@keyframes width {
+  from {padding: 37px 0 37px 0}
+  50% {padding: 37px 50px 37px 50px}
+  to {padding: 37px 0 37px 0}
+}
+
 .plan {
 
   .plan_container {
@@ -6,10 +16,10 @@
 
     .plan_item {
       display: flex;
+      justify-content: space-between;
       background: #ffffff;
       padding: 50px 0 50px 100px;
       border-radius: 10px;
-      overflow: hidden;
       margin-bottom: 100px;
       position: relative;
 
@@ -56,6 +66,9 @@
           position: relative;
           background: url("../images/loading-template.png") repeat repeat;
           padding: 37px 0;
+          @media only screen and (max-width: 768px) {
+            margin-bottom: 50px;
+          }
         }
 
         .plan_item_info_loading:before {
@@ -114,9 +127,14 @@
       }
 
       .plan_item_image {
-        width: 60%;
+        width: 42%;
+        min-width: 42%;
         @media only screen and (max-width: 768px) {
           display: none;
+        }
+
+        img {
+          width: 100%;
         }
       }
     }
@@ -127,7 +145,7 @@
       background: url("../images/sprite.png") -3px -44px;
       height: 102px;
       width: 12px;
-      bottom: -39px;
+      bottom: -75px;
     }
   }
 }

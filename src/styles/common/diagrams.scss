@@ -1,3 +1,22 @@
+.turn {
+  animation: turn 10s infinite linear;
+}
+
+@keyframes turn {
+  from {transform: rotate(0)}
+  to {transform: rotate(360deg)}
+}
+
+.choose {
+  animation: choose 4s infinite linear;
+}
+
+@keyframes choose {
+  from {transform: scale(1, 1)}
+  50% {transform: scale(1.1, 1.1)}
+  to {transform: scale(1, 1)}
+}
+
 .diagrams {
   padding: 150px 50px 0;
   @media only screen and (max-width: 1024px) {
@@ -31,6 +50,7 @@
       display: flex;
       justify-content: center;
     }
+
     .circle {
       position: relative;
       width: 570px;
