@@ -1,5 +1,20 @@
 'use strict';
 
+// delegate events
+const delegate = (criteria, listener) => {
+	return function(e) {
+		const el = e.target;
+		do {
+			if (!criteria(el)) {
+				continue;
+			}
+			e.delegateTarget = el;
+			listener.call(this, e);
+			return;
+		} while ((el === el.parentNode));
+	};
+};
+
 // drop menu
 (() => {
 	const _dropBtn = document.querySelector('.js-drop');
@@ -44,4 +59,27 @@
 		}, second);
 	};
 	timer('.js-timer', 'July 25, 2019 00:00:00');
+})();
+
+// mobile menu
+(() => {
+	const _menuBtn = document.querySelector('.js-menuBtn');
+	const _menu = document.querySelector('.js-menu');
+	const _menuLink = document.querySelectorAll('.js-menuLink');
+
+	_menuBtn.addEventListener('click', ev => {
+		ev.preventDefault();
+		const _target = ev.target || ev.currentTarget;
+		_target.classList.toggle('active');
+		_menu.classList.toggle('active');
+	});
+	
+	Array.prototype.forEach.call(_menuLink, el => {
+		el.addEventListener('click', () => {
+			if (window.innerWidth <= 1200) {
+				_menuBtn.classList.remove('active');
+				_menu.classList.remove('active');
+			}
+		})
+	})
 })();
