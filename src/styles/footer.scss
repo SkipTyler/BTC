@@ -5,17 +5,24 @@
   .footer_content {
     display: flex;
     align-items: center;
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 680px) {
       flex-direction: column-reverse;
     }
 
     div {
       width: 33.3%;
+      @media only screen and (max-width: 680px) {
+        width: 100%;
+      }
 
       p {
         font: 500 14px $ff-Raleway;
         line-height: 24px;
         color: #102442;
+        @media only screen and (max-width: 680px) {
+          text-align: center;
+          padding-top: 10px;
+        }
       }
     }
 
@@ -49,6 +56,10 @@
 
     .to-top {
       text-align: right;
+      @media only screen and (max-width: 680px) {
+        text-align: center;
+        margin-bottom: 10px;
+      }
 
       a{
         font: 400 14px $ff-Raleway;
