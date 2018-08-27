@@ -132,6 +132,7 @@
         background-image: linear-gradient(to top, #5bd3ff 0%, #78e6ff 100%);
         font: 700 18px $ff-Raleway;
         line-height: 24px;
+        animation: btnAnimations 1.5s linear infinite alternate;
       }
 
       .desc {
