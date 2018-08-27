@@ -1,10 +1,11 @@
-.turn {
-  animation: turn 10s infinite linear;
+.scale {
+  animation: scale 2s infinite linear;
 }
 
-@keyframes turn {
-  from {transform: rotate(0)}
-  to {transform: rotate(360deg)}
+@keyframes scale {
+  from {transform: scale(.9, .9)}
+  50% {transform: scale(1, 1)}
+  to {transform: scale(.9, .9)}
 }
 
 .choose {

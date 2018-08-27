@@ -63,22 +63,15 @@ const delegate = (criteria, listener) => {
 
 document.addEventListener('DOMContentLoaded', function () {
     const circles = document.querySelectorAll('.diagrams_image');
-    const OSs = document.querySelectorAll('.cell');
     const load = document.querySelectorAll('.plan_item_info_loading');
 
     // rotate animation
     for (let circle of circles) {
-        circle.classList.add('turn');
+        circle.classList.add('scale');
     }
-
-    // scale animation
-    for (let OS of OSs) {
-        OS.classList.add('choose');
-    }
-    document.querySelector('.wallet_image').classList.add('choose');
 
     for (let item of load) {
-        item.classList.add('width');
+        item.classList.add('load');
     }
 
     // colors animation

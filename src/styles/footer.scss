@@ -5,69 +5,70 @@
   .footer_content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
     @media only screen and (max-width: 1024px) {
       flex-direction: column-reverse;
     }
 
-    p {
-      font: 500 14px $ff-Raleway;
-      line-height: 24px;
-      color: #102442;
-      text-align: center;
+    div {
+      width: 33.3%;
+
+      p {
+        font: 500 14px $ff-Raleway;
+        line-height: 24px;
+        color: #102442;
+      }
     }
 
     .footer_icons {
-      position: relative;
-      background: url("../images/logo-footer.png") center center;
-      width: 136px;
-      height: 100px;
-      transform: translateX(-85px);
-      @media only screen and (max-width: 1024px) {
-        transform: translateX(40px);
-      }
-    }
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    .footer_icons:before,
-    .footer_icons:after {
-      position: absolute;
-      content: '';
-      background: url("../images/sprite.png");
-      height: 41px;
-      width: 41px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-      .footer_icons:after {
-        background-position: 144px -2px;
-        left: -32px;
+      .twitter,
+      .unknown {
+        background: url("../images/sprite.png");
+        height: 41px;
+        width: 41px;
+        margin-right: 10px;
       }
 
-      .footer_icons:before {
+      .twitter {
         background-position: 144px -48px;
-        left: -90px;
       }
 
-    a {
-      font: 400 14px $ff-Raleway;
-      color: #5bd3ff;
-      line-height: 24px;
-      position: relative;
+      .unknown {
+        background-position: 144px -2px;
+      }
+
+      .logo {
+        background: url("../images/logo-footer.png") center center;
+        width: 113px;
+        height: 80px;
+      }
     }
 
-    a:before {
-      position: absolute;
-      content: '';
-      left: 75px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 0;
-      height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-bottom: 10px solid #5bd3ff;;
+    .to-top {
+      text-align: right;
+
+      a{
+        font: 400 14px $ff-Raleway;
+        color: #5bd3ff;
+        line-height: 24px;
+        position: relative;
+      }
+
+      a:before {
+        position: absolute;
+        content: '';
+        left: 75px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 10px solid #5bd3ff;;
+      }
     }
   }
 }
