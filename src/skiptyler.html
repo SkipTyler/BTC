@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class="no-scroll">
 <head>
 	<!-- meta character set -->
 	<meta charset="utf-8">
@@ -10,7 +10,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
+<div class="preloader--wrap active js-preloader">
+	<div class="preloader">
+		<div class="preloader_x js-preloaderItem"></div>
+		<div class="preloader_node js-preloaderItem"></div>
+		<div class="preloader_coin js-preloaderItem"></div>
+	</div>
+</div>
 	<section id="header" class="header--wrap">
 		<header class="header wrapper">
 			<a href="#" class="header__logo">
@@ -21,24 +27,24 @@
 			</a>
 			<nav class="header__nav js-menu">
 				<ul class="header__nav-menu">
-					<li><a class="js-menuLink" href="#">About Coin</a></li>
-					<li><a class="js-menuLink" href="#">Our Plan</a></li>
-					<li><a class="js-menuLink" href="#">Roadmap</a></li>
-					<li><a class="js-menuLink" href="#">Coin details</a></li>
+					<li><a class="js-menuLink js-scrollTo" href="#about">About Coin</a></li>
+					<li><a class="js-menuLink js-scrollTo" href="#">Our Plan</a></li>
+					<li><a class="js-menuLink js-scrollTo" href="#roadmap">Roadmap</a></li>
+					<li><a class="js-menuLink js-scrollTo" href="#details">Coin details</a></li>
 					<li class="drop--wrap">
 						<a class="drop js-drop" href="#">Download</a>
 						<ul class="drop__list js-dropList">
-							<li><a href="#">MAC</a></li>
-							<li><a href="#">LINUX</a></li>
-							<li><a href="#">WIN 64</a></li>
-							<li><a href="#">WIN 32</a></li>
+							<li><a href="#" target="_blank">MAC</a></li>
+							<li><a href="#" target="_blank">LINUX</a></li>
+							<li><a href="#" target="_blank">WIN 64</a></li>
+							<li><a href="#" target="_blank">WIN 32</a></li>
 						</ul>
 					</li>
-					<li><a class="js-menuLink" href="#">Social Media</a></li>
+					<li><a class="js-menuLink js-scrollTo" href="#">Social Media</a></li>
 				</ul>
 				<div class="header__nav-btns">
-					<a href="#" class="header__nav-buy btn-blue">BUY COINS NOW</a>
-					<a href="#" class="header__nav-list btn-orange"></a>
+					<a href="#" target="_blank" class="header__nav-buy btn-blue">BUY COINS NOW</a>
+					<a href="#" target="_blank" class="header__nav-list btn-orange"></a>
 				</div>
 			</nav>
 		</header>
@@ -49,7 +55,7 @@
 				<div class="stages__st--wrap">
 					<div class="stages__st">
 						<p class="stages__st-title">1-st stage</p>
-						<div class="stages__st-box">
+						<div class="stages__st-box active">
 							<h6>5</h6>
 							<h5>MASTERNODES</h5>
 							<p><span>0.3 BTC</span>each</p>
@@ -174,7 +180,7 @@
 						</div>
 						<div class="graph__img--wrap">
 							<div class="graph__img"></div>
-							<a href="#">Masternodes overall graph</a>
+							<a target="_blank" href="#">Masternodes overall graph</a>
 						</div>
 					</div>
 					
@@ -221,7 +227,7 @@
 			</div>
 		</div>
 		<h6 class="roadmap--title">Coin details</h6>
-		<div class="roadmap__details wrapper">
+		<div id="details" class="roadmap__details wrapper">
 			<div class="roadmap__details-left">
 				<div>
 					<p>Name:</p>
@@ -269,7 +275,7 @@
 				</p>
 				<p>The coin can be used not only as a means of investing monetary assets, but also as a method for ensuring more comfortable environment for trading activities with cryptocurrencies at the Nodex exchange. The project will be constantly improved, and it is very likely that a new version of the platform will appear in the future, featuring decentralized management for carrying out instant transactions on the cryptocurrency exchange.
 				</p>
-				<a href="#" class="btn-orange">BUY COINS NOW</a>
+				<a target="_blank" href="#" class="btn-orange">BUY COINS NOW</a>
 			</div>
 		</div>
 	</section>

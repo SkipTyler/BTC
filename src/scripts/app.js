@@ -1,5 +1,14 @@
 'use strict';
 
+// preloader
+const _preloader = document.querySelector('.js-preloader');
+setTimeout(() => {
+	_preloader.classList.remove('active');
+	document.documentElement.classList.remove('no-scroll');
+}, 6000);
+
+
+
 // delegate events
 const delegate = (criteria, listener) => {
 	return function(e) {
@@ -14,6 +23,22 @@ const delegate = (criteria, listener) => {
 		} while ((el === el.parentNode));
 	};
 };
+
+// scroll to
+(() => {
+	const scrollBtn = elem => {
+		return (elem instanceof HTMLElement) && elem.matches('.js-scrollTo');
+	};
+	const scrollOut = ev => {
+		ev.preventDefault();
+		const _target = ev.target || ev.currentTarget;
+		const _id = _target.getAttribute('href');
+		const _to = document.querySelector(_id);
+		_to.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	}
+
+	document.addEventListener("click", delegate(scrollBtn, scrollOut));
+})();
 
 // drop menu
 (() => {

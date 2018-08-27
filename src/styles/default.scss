@@ -4,6 +4,8 @@ body {
 	flex-direction: column;
 	background-color: #4747f6;
 	overflow-x: hidden;
+	background-image: url("../images/bg-document.png");
+	background-size: cover;
 }
 
 .wrapper {
@@ -24,6 +26,7 @@ body {
 	font-weight: 400;
 	text-transform: uppercase;
 	transition: box-shadow .3s ease;
+	animation: btnAnimations 1.5s linear infinite alternate;
 	&:hover {
 		box-shadow: inset 0 5px 37px 3px rgba(53, 64, 86, 0.14), 0 0 14px 1px rgba(91, 211, 255, 0.15);
 	}
@@ -40,6 +43,7 @@ body {
 	transition: box-shadow .3s ease;
 	text-align: center;
 	display: block;
+	animation: btnAnimations 1.5s linear infinite alternate;
 	@media (max-width: 768px) {
 		line-height: 53px;
 		font-size: 15px;
@@ -106,5 +110,125 @@ body {
 
 	h2 {
 		font-size: 60px;
+	}
+}
+
+
+@keyframes btnAnimations {
+	0% {
+		opacity: .75;
+		transform: scale(.98);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes scaleImg {
+	0% {
+		opacity: .85;
+
+	}
+	50% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.preloader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 134px;
+	height: 120px;
+	z-index: 30;
+	&_x {
+		width: 161px;
+		height: 171px;
+		position: absolute;
+		background-image: url("../images/loader_x.png");
+		background-size: 100% 100%;
+		left: 0;
+		top: 0;
+		animation: preX 1.5s cubic-bezier(0,.41,.79,1.43) 1s;
+		animation-fill-mode: both;
+	}
+	&_node {
+		position: absolute;
+		width: 21px;
+		height: 118px;
+		background-image: url("../images/loader_node.png");
+		background-size: 100% 100%;
+		left: 70px;
+		top: 27px;
+		animation: preNode 1.5s ease 2.3s;
+		animation-fill-mode: both;
+		transform-origin: top;
+	}
+	&_coin {
+		position: absolute;
+		width: 43px;
+		height: 17px;
+		background-image: url("../images/loader_coin.png");
+		background-size: 100% 100%;
+		left: 115px;
+		top: 76px;
+		animation: preCoin 1.5s ease 3.6s;
+		animation-fill-mode: both;
+	}
+	&--wrap {
+		background-color: #4747f6;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		opacity: 0;
+		z-index: -25;
+		visibility: hidden;
+		transition: all .3s ease;
+		&.active {
+			opacity: 1;
+			z-index: 25;
+			visibility: visible;
+		}
+	}
+}
+
+@keyframes preX {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes preNode {
+	0% {
+		transform: scaleY(0);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+@keyframes preCoin {
+	0% {
+		opacity: 0;
+		transform: translateX(25px);
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.no-scroll {
+	overflow: hidden;
+	body {
+		overflow: hidden;
 	}
 }
