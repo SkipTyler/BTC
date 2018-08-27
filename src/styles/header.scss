@@ -26,6 +26,9 @@
 			background-color: #4747f6;
 			transform: translateX(130%);
 		}
+		@media (max-width: 400px) {
+			top: 80px;
+		}
 		&.active {
 			transform: translateX(0);
 		}

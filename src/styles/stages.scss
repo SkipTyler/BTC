@@ -174,16 +174,20 @@
 			display: flex;
 			& > div {
 				width: 50%;
-				@media (max-width: 1024px) {
-					&:last-of-type {
-						width: 60%;
-					}
+			}
+		}
+		@media (max-width: 1024px) {
+			& > div {
+				&:last-of-type {
+					width: 60%;
 				}
-				@media (max-width: 680px) {
+			}
+		}
+		@media (max-width: 680px) {
+			& > div {
+				width: 100%;
+				&:last-of-type {
 					width: 100%;
-					&:last-of-type {
-						width: 100%;
-					}
 				}
 			}
 		}

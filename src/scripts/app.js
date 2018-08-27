@@ -5,7 +5,7 @@ const _preloader = document.querySelector('.js-preloader');
 setTimeout(() => {
 	_preloader.classList.remove('active');
 	document.documentElement.classList.remove('no-scroll');
-}, 6000);
+}, 5500);
 
 
 
