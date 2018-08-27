@@ -8,15 +8,6 @@
   to {transform: scale(.9, .9)}
 }
 
-.choose {
-  animation: choose 4s infinite linear;
-}
-
-@keyframes choose {
-  from {transform: scale(1, 1)}
-  50% {transform: scale(1.1, 1.1)}
-  to {transform: scale(1, 1)}
-}
 
 .diagrams {
   padding: 150px 50px 0;
