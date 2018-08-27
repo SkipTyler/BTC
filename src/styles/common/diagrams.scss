@@ -1,11 +1,11 @@
 .scale {
-  animation: scale 2s infinite linear;
+  animation: scale 4s infinite linear;
 }
 
 @keyframes scale {
-  from {transform: scale(.9, .9)}
+  from {transform: scale(.96, .96)}
   50% {transform: scale(1, 1)}
-  to {transform: scale(.9, .9)}
+  to {transform: scale(.96, .96)}
 }
 
 
