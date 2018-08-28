@@ -137,33 +137,15 @@ body {
 }
 
 .preloader {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	width: 161px;
-	height: 171px;
-	z-index: 30;
-	&_x {
-		width: 161px;
-		height: 171px;
-		position: absolute;
-		background-image: url("../images/loader_x.png");
-		background-size: 100% 100%;
-		left: 0;
-		top: 0;
-		animation: preX 1.5s cubic-bezier(0,.41,.79,1.43) 1s;
-		animation-fill-mode: both;
-	}
 	&--wrap {
-		background-color: #4747f6;
+		background:#4747f6;
 		position: fixed;
 		left: 0;
 		top: 0;
 		width: 100%;
 		height: 100vh;
 		opacity: 0;
-		z-index: -25;
+		z-index: 25;
 		visibility: hidden;
 		transition: all .3s ease;
 		&.active {
