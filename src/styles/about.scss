@@ -95,6 +95,7 @@
 				bottom: 28px;
 				right: 37px;
 				transition: all .3s ease;
+				z-index: 3;
 				&:hover {
 					text-decoration: underline;
 				}
@@ -133,6 +134,24 @@
 					width: 94%;
 					height: 94%;
 					animation: scaleImg 2s linear infinite alternate;
+					position: relative;
+					overflow: hidden;
+					&.active {
+						&:after {
+							transform: translateX(100%);
+						}
+					}
+					&:after {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 100%;
+						height: 100%;
+						background-color: rgba(68, 67, 233, 1);
+						z-index: 2;
+						transition: all 3.5s linear;
+					}
 					&--wrap {
 						box-shadow: 0 6px 64px 9px rgba(0, 0, 0, 0.15);
 						border-radius: 10px;
@@ -164,17 +183,17 @@
 	}
 
 	&--wrap {
-		padding-top: 298px;
+		padding-top: 150px;
 		padding-right: 0;
 		@media (max-width: 1200px) {
-			padding-top: 120px;
+			padding-top: 60px;
 		}
 		@media (max-width: 680px) {
 			padding-left: 0;
 			padding-right: 0;
 		}
 		@media (max-width: 400px) {
-			padding-top: 60px;
+			padding-top: 30px;
 		}
 	}
 }

@@ -103,6 +103,7 @@
           .in-processing {
             background-color: #69dafc;
             width: 50%;
+            overflow: hidden;
           }
 
           .in-processing:after {
@@ -112,6 +113,7 @@
 
           .freak {
             width: 70%;
+            overflow: hidden;
           }
 
           .freak:after {
