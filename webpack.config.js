@@ -173,23 +173,23 @@ module.exports = (env = {}, argv) => {
 				new plugins.extractText({
 					filename: 'styles/[name].css'
 				}),
-				// new plugins.html({
-				// 	template: 'skiptyler.html',
-				// 	filename: 'skiptyler.html',
-				// 	minify: {
-				// 		removeScriptTypeAttributes: true,
-				// 		removeStyleLinkTypeAttributes: true
-				// 	}
-				// }),
-				// // add html template
-				// new plugins.html({
-				// 	template: 'gats.html',
-				// 	filename: 'gats.html',
-				// 	minify: {
-				// 		removeScriptTypeAttributes: true,
-				// 		removeStyleLinkTypeAttributes: true
-				// 	}
-				// }),
+				new plugins.html({
+					template: 'skiptyler.html',
+					filename: 'skiptyler.html',
+					minify: {
+						removeScriptTypeAttributes: true,
+						removeStyleLinkTypeAttributes: true
+					}
+				}),
+				// add html template
+				new plugins.html({
+					template: 'gats.html',
+					filename: 'gats.html',
+					minify: {
+						removeScriptTypeAttributes: true,
+						removeStyleLinkTypeAttributes: true
+					}
+				}),
 				new plugins.html({
 					template: 'index.html',
 					filename: 'index.html',
