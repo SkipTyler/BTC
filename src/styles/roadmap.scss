@@ -4,7 +4,13 @@
 		display: flex;
 		justify-content: space-around;
 		position: relative;
-		background: linear-gradient(to left, #4747f6 0%, #f27d66 100%) center/100% 2px no-repeat;
+		align-items: center;
+		height: 2px;
+		background-image: linear-gradient(80deg, #00aeff, #3369e7);
+		background-size: 200%;
+		background-position: center left 0;
+		transition: 1000ms ease;
+		animation: gradient 2s ease alternate infinite;
 		z-index: 0;
 		margin-top: 250px;
 		margin-bottom: 250px;
@@ -12,15 +18,17 @@
 			margin-top: 360px;
 		}
 		@media (max-width: 1024px) {
-			background: linear-gradient(to bottom, #4747f6 0%, #f27d66 100%) center/2px 100% no-repeat;
+			height: 100%;
+			width: 2px;
 			flex-direction: column;
 			align-items: center;
 			margin-top: 100px;
 			margin-bottom: 0;
+			margin-left: auto;
+			margin-right: auto;
 		}
 		@media (max-width: 680px) {
 			margin-left: 50px;
-			background: linear-gradient(to bottom, #4747f6 0%, #f27d66 100%) left/2px 100% no-repeat;
 			align-items: flex-start;
 		}
 		@media (max-width: 530px) {
@@ -36,11 +44,14 @@
 			width: 28px;
 			height: 28px;
 			border-radius: 100px;
-			background: linear-gradient(to left, #4747f6 0%, #f27d66 100%) fixed;
+			background-image: linear-gradient(80deg, #00aeff, #3369e7);
+			background-size: 200%;
+			background-position: center left 0;
+			transition: 1000ms ease;
+			animation: gradient 2s ease alternate infinite;
 			@media (max-width: 1024px) {
 				top: auto;
 				left: 50%;
-				background: linear-gradient(to top, #4747f6 0%, #f27d66 100%) fixed;
 				transform: translateX(-50%);
 				bottom: 0;
 			}
@@ -61,16 +72,15 @@
 				left: 0;
 			}
 		}
-		.after {
-			@media (max-width: 1024px) {
-				background: linear-gradient(to bottom, #4747f6 0%, #f27d66 100%) fixed;
-			}
-		}
 		&-circle {
 			height: 92px;
 			width: 92px;
 			border-radius: 100px;
-			background: linear-gradient(to left, #4747f6 0%, #f27d66 100%) fixed;
+			background-image: linear-gradient(80deg, #00aeff, #3369e7);
+			background-size: 200%;
+			background-position: center left 0;
+			transition: 1000ms ease;
+			animation: gradient 2s ease alternate infinite;
 			text-align: center;
 			line-height: 92px;
 			color: #ffffff;
@@ -79,10 +89,8 @@
 			font-weight: 400;
 			@media (max-width: 1024px) {
 				margin: 50px 0;
-				background: linear-gradient(to bottom, #4747f6 0%, #f27d66 100%) fixed;
 			}
 			@media (max-width: 680px) {
-				background: linear-gradient(to bottom, #4747f6 0%, #f27d66 100%) fixed;
 				position: relative;
 				left: -46px;
 			}
@@ -92,10 +100,10 @@
 				width: 62px;
 				line-height: 62px;
 				font-size: 40px;
-				&:nth-child(4) {
+				&:nth-child(6) {
 					margin-bottom: 110px;
 				}
-				&:nth-child(5) {
+				&:nth-child(7) {
 					margin-bottom: 340px;
 				}
 			}
@@ -105,26 +113,30 @@
 		position: absolute;
 		width: 23.3%;
 		@media (max-width: 1024px) {
-			width: 40%;
+			width: 40vw;
 		}
 		@media (max-width: 680px) {
-			width: calc(100% - 70px);
+			width: calc(100vw - 170px);
 		}
 		&:nth-child(even) {
-			top: -25px;
+			top: -60px;
 			transform: translateY(-100%);
 			@media (max-width: 1024px) {
 				top: auto;
 				transform: translateX(0);
+				text-align: right;
+			}
+			@media (max-width: 680px) {
+				text-align: left;
 			}
 		}
 		&:nth-child(odd) {
-			bottom: -25px;
+			bottom: -60px;
 			transform: translateY(100%);
 			@media (max-width: 1024px) {
 				bottom: auto;
 				transform: translateX(0);
-				text-align: right;
+				text-align: left;
 			}
 			@media (max-width: 680px) {
 				text-align: left;
@@ -157,7 +169,7 @@
 				color: #21c1b3;
 			}
 			@media (max-width: 1024px) {
-				left: 2%;
+				left: 60px;
 				top: 0;
 			}
 			@media (max-width: 680px) {
@@ -179,7 +191,7 @@
 			}
 			@media (max-width: 1024px) {
 				left: auto;
-				right: 2%;
+				right: 60px;
 				top: 16.6%;
 			}
 			@media (max-width: 680px) {
@@ -198,7 +210,7 @@
 				color: #a162a9;
 			}
 			@media (max-width: 1024px) {
-				left: 2%;
+				left:  60px;
 				top: 33.3%;
 			}
 			@media (max-width: 680px) {
@@ -217,7 +229,7 @@
 			}
 			@media (max-width: 1024px) {
 				left: auto;
-				right: 2%;
+				right: 60px;
 				top: 49.9%;
 			}
 			@media (max-width: 680px) {
@@ -236,7 +248,7 @@
 				color: #5f4de0;
 			}
 			@media (max-width: 1024px) {
-				left: 2%;
+				left: 60px;
 				top: 66.5%;
 			}
 			@media (max-width: 680px) {
@@ -254,7 +266,7 @@
 				color: #5f4de0;
 			}
 			@media (max-width: 1024px) {
-				right: 2%;
+				right: 60px;
 				bottom: 0;
 			}
 			@media (max-width: 680px) {
@@ -364,4 +376,9 @@
 		padding-top: 143px;
 		padding-bottom: 150px;
 	}
+}
+
+@keyframes gradient{
+	0% { background-position: center left 0}
+	100% { background-position: center left 100%}
 }

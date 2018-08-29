@@ -154,30 +154,12 @@
 			</div>
 			<div class="about__trend-graphics--wrap">
 				<div class="about__trend-graphics">
-					<div class="graph__column">
-						<p>220,000</p>
-						<p>180,00</p>
-						<p>140,000</p>
-						<p>100,000</p>
-						<p>60,000</p>
-					</div>
-					<div class="graph__row">
-						<p>21.02</p>
-						<p>14.03</p>
-						<p>28.03</p>
-						<p>11.04</p>
-						<p>25.04</p>
-						<p>16.05</p>
-						<p>30.05</p>
-						<p>13.06</p>
-						<p>27.06</p>
-						<p>18.07</p>
-						<p>01.08</p>
-						<p>21.08</p>
-					</div>
 					<div class="graph__img--wrap">
-						<div class="graph__img"></div>
-						<a target="_blank" href="#">Masternodes overall graph</a>
+						<main ng-app="app">
+							<section class="container" ng-controller="Controller as ctrl">
+								<area-chart data="ctrl.data"></area-chart>
+							</section>
+						</main>
 					</div>
 				</div>
 
@@ -231,12 +213,20 @@
 </section>
 <section id='media' class="media">
 	<div class="wrapper">
-		<div class="media_item">
-			<div class="media_item_content"></div>
-		</div>
-		<div class="media_item">
-			<div class="media_item_content"></div>
-		</div>
+		<a href="#" target="_blank" class="media_item">
+			<img src="http://zoogalaktika.ru/assets/images/invertebrata/arthropoda/insecta/odonata/libellula-depressa/libellula-depressa_01.jpg" alt="">
+			<div class="media_item_content">
+				<h6>Lorem ipsum</h6>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda atque</p>
+			</div>
+		</a>
+		<a href="#" target="_blank" class="media_item">
+			<img src="http://zoogalaktika.ru/assets/images/invertebrata/arthropoda/insecta/odonata/libellula-depressa/libellula-depressa_01.jpg" alt="">
+			<div class="media_item_content">
+				<h6>Lorem ipsum</h6>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam assumenda atque</p>
+			</div>
+		</a>
 	</div>
 </section>
 <section id='table' class="table">
@@ -523,6 +513,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highstock/5.0.0/highstock-all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 <script src="scripts/react.js"></script>
 </body>
 </html>

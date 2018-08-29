@@ -138,7 +138,7 @@ body {
 
 .preloader {
 	&--wrap {
-		background:#4747f6;
+		//background:#4747f6;
 		position: fixed;
 		left: 0;
 		top: 0;
@@ -148,6 +148,8 @@ body {
 		z-index: 25;
 		visibility: hidden;
 		transition: all .3s ease;
+		animation: preX 5.5s linear;
+		animation-fill-mode: both;
 		&.active {
 			opacity: 1;
 			z-index: 25;
@@ -158,10 +160,13 @@ body {
 
 @keyframes preX {
 	0% {
-		transform: scale(0);
+		background: rgba(71, 71, 246, 1);
+	}
+	50% {
+		background: rgba(71, 71, 246, 1);
 	}
 	100% {
-		transform: scale(1);
+		background: rgba(71, 71, 246, 0.3);
 	}
 }
 
@@ -6200,3 +6205,5 @@ $randomTranslate:random(200)+px;
 	50% {transform:rotate(180deg)translateX($randomTranslate)translateY($randomTranslate);}
 	100% {transform:rotate(360deg)translateX(0)translateY(0);}
 }
+
+
