@@ -99,6 +99,58 @@
 						right: 0;
 						padding-left: 11px;
 						padding-top: 21px;
+						main,
+						.container {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							color: #fff;
+						}
+						main {
+							height: 100%;
+							width: 100%;
+						}
+						.container {
+							height: 100%;
+							width: 100%;
+						}
+						area-chart,
+						[area-chart],
+						.area-chart {
+							height: 100%;
+							width: 100%;
+						}
+						area-chart .highcharts-tooltip > text,
+						[area-chart] .highcharts-tooltip > text,
+						.area-chart .highcharts-tooltip > text,
+						area-chart .highcharts-legend-item > text,
+						[area-chart] .highcharts-legend-item > text,
+						.area-chart .highcharts-legend-item > text,
+						area-chart .highcharts-axis-labels > text,
+						[area-chart] .highcharts-axis-labels > text,
+						.area-chart .highcharts-axis-labels > text {
+							color: #999 !important;
+							fill: currentColor !important;
+						}
+						area-chart .area-chart-tooltip,
+						[area-chart] .area-chart-tooltip,
+						.area-chart .area-chart-tooltip {
+							padding: 10px;
+							background-color: #222;
+						}
+						area-chart .area-chart-tooltip > header,
+						[area-chart] .area-chart-tooltip > header,
+						.area-chart .area-chart-tooltip > header {
+							text-align: center;
+							margin-bottom: 5px;
+							color: #999;
+						}
+						area-chart .area-chart-tooltip .point-value,
+						[area-chart] .area-chart-tooltip .point-value,
+						.area-chart .area-chart-tooltip .point-value {
+							color: #999;
+							text-align: center;
+						}
 					}
 				}
 			}
@@ -134,55 +186,3 @@
 	}
 }
 
-main,
-.container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #fff;
-}
-main {
-	height: 100%;
-	width: 100%;
-}
-.container {
-	height: 100%;
-	width: 100%;
-}
-area-chart,
-[area-chart],
-.area-chart {
-	height: 100%;
-	width: 100%;
-}
-area-chart .highcharts-tooltip > text,
-[area-chart] .highcharts-tooltip > text,
-.area-chart .highcharts-tooltip > text,
-area-chart .highcharts-legend-item > text,
-[area-chart] .highcharts-legend-item > text,
-.area-chart .highcharts-legend-item > text,
-area-chart .highcharts-axis-labels > text,
-[area-chart] .highcharts-axis-labels > text,
-.area-chart .highcharts-axis-labels > text {
-	color: #999 !important;
-	fill: currentColor !important;
-}
-area-chart .area-chart-tooltip,
-[area-chart] .area-chart-tooltip,
-.area-chart .area-chart-tooltip {
-	padding: 10px;
-	background-color: #222;
-}
-area-chart .area-chart-tooltip > header,
-[area-chart] .area-chart-tooltip > header,
-.area-chart .area-chart-tooltip > header {
-	text-align: center;
-	margin-bottom: 5px;
-	color: #999;
-}
-area-chart .area-chart-tooltip .point-value,
-[area-chart] .area-chart-tooltip .point-value,
-.area-chart .area-chart-tooltip .point-value {
-	color: #999;
-	text-align: center;
-}
