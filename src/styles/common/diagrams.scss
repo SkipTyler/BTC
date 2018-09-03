@@ -35,146 +35,22 @@
   }
 
   .diagrams_image {
-    width: 50%;
-    position: relative;
     @media only screen and (max-width: 680px) {
       width: 100%;
       display: flex;
       justify-content: center;
     }
 
-    .circle {
-      position: relative;
-      width: 570px;
-      height: 570px;
-      overflow: hidden;
-      border-radius: 50%;
-      background: #ee8467;
-      box-shadow: 0 6px 64px 9px rgba(0, 0, 0, 0.15);
-      @media only screen and (max-width: 1024px) {
-        width: 310px;
-        height: 310px;
-      }
-
-      .sector,
-      .diagram_second_sector {
-        width: 50%;
-        height: 50%;
-        position: absolute;
-        left: 50%;
-        top: 0;
-        transform-origin: left bottom;
-      }
-
-      .sector:before,
-      .sector:after {
-        position: absolute;
-        color: #ffffff;
-        font-family: $ff-Roboto;
-        font-size: 24px;
-        @media only screen and (max-width: 1024px) {
-          font-size: 22px;
+      .donut {
+        height: 570px;
+        width: 570px;
+        -webkit-filter: drop-shadow(6px 64px 9px rgba(0, 0, 0, 0.15));
+        filter: drop-shadow(6px 64px 9px rgba(0, 0, 0, 0.15));
+        @media only screen and (max-width: 680px) {
+          height: 310px;
+          width: 310px;
         }
       }
-
-      // first sector
-      .sector:nth-of-type(1) {
-        background: #4747f6;
-      }
-
-      .sector:nth-of-type(2) {
-        background: #4747f6;
-        transform: rotate(90deg) skewY(108deg);
-      }
-
-      .sector:nth-of-type(1):before {
-        content: '30';
-        bottom: 21px;
-        left: 31px;
-      }
-
-      // second sector
-      .sector:nth-of-type(3) {
-        background: #75e4ff;
-        transform: rotate(108deg) skewY(185deg);
-      }
-
-      .sector:nth-of-type(3):before {
-        content: '20';
-        transform: rotate(-109deg);
-        bottom: 51px;
-        left: 31px;
-      }
-
-      // third sector
-      .sector:nth-of-type(4) {
-        background: #ffce40;
-        transform: rotate(-180deg) skewY(144deg);
-      }
-
-      .sector:nth-of-type(4):before {
-        content: 'Other';
-        transform: rotate(180deg) skewY(-144deg);
-        bottom: 25px;
-        left: 13px;
-        font-size: 18px;
-      }
-
-      // fourth sector
-      .sector:nth-of-type(4):after {
-        content: '35';
-        transform: rotate(180deg) skewY(-144deg);
-        top: 118%;
-        left: 30px;
-        @media only screen and (max-width: 1024px) {
-          top: 132%;
-          left: 29px;
-        }
-      }
-
-      // second diagram
-
-      // first sector
-      .diagram_second_sector:nth-of-type(1) {
-        background: #4747f6;
-        transform: rotate(30deg);
-      }
-
-      .diagram_second_sector:nth-of-type(2) {
-        background: #4747f6;
-        transform: rotate(90deg) skewY(144deg);
-      }
-    }
-
-    .second-circle:before,
-    .second-circle:after {
-      position: absolute;
-      color: #ffffff;
-      font-family: $ff-Roboto;
-      font-size: 24px;
-      z-index: 1;
-      top: 269px;
-      @media only screen and (max-width: 1024px) {
-        font-size: 20px;
-        top: 144px;
-      }
-    }
-
-    .second-circle:before {
-      content: 'Other, 40%';
-      left: 339px;
-      @media only screen and (max-width: 1024px) {
-        left: 183px;
-      }
-    }
-
-    .second-circle:after {
-      content: 'Dash, 60%';
-      left: 130px;
-      @media only screen and (max-width: 1024px) {
-        left: 30px;
-      }
-    }
   }
 
   .diagrams_desc_right {
