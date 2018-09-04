@@ -267,5 +267,3 @@ ReactDOM.render(React.createElement(Particles, null), document.getElementById("r
 
 })();
 
-
-// diagram 1

@@ -46,6 +46,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+        max-height: 300px;
       }
       @media only screen and (max-width: 768px) {
         width: 90%;

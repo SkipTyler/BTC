@@ -2,53 +2,15 @@
 
 // preloader
 const _preloader = document.querySelector('.js-preloader');
+const _preloaderItem = document.querySelectorAll('.js-preloaderItem');
+_preloaderItem.forEach(elem => {
+	elem.classList.add('animate');
+});
 setTimeout(() => {
 	_preloader.classList.remove('active');
 	document.documentElement.classList.remove('no-scroll');
 }, 5150);
 
-// preloader
-(() => {
-	var paper = Raphael("canvas", '100%', '100%');
-	var h = $(window).height();
-	var w = $(window).width();
-	var cDiam = 40;
-	var cx = w / 2;
-	var cy = h / 2;
-
-	var steps = w / cDiam;
-	var incRad = w / steps;
-
-	function drawCircles(){
-		for (var i = 0; i < steps; i++) {
-			 var startDiam = i*steps;
-			var animCircle = Raphael.animation({'stroke-width':steps+1,'r':startDiam+20},1500, "<>").delay(i*50);
-			paper.circle(cx, cy, startDiam).attr({
-				'stroke': 'rgba(250, 148, 121, .1)',
-				'stroke-width': '0',
-				'fill': 'none'
-			}).animate(animCircle);
-		}
-	}
-	var toCenter = paper.path("M" + 0 + "," + h + "L" + 0 + "," + h);
-	toCenter.attr({
-		'stroke': '#fa9479',
-		'stroke-width': '1',
-		'stroke-linejoin': 'round',
-		'fill': 'none'
-	});
-	var transformedPath = Raphael.transformPath("M" + 0 + "," + h + "L" + cx + "," + cy);
-	toCenter.animate({
-		path: transformedPath
-	}, 1000, lineReverse);
-
-	function lineReverse() {
-		var reversedPath = Raphael.transformPath("M" + cx + "," + cy + "L" + cx + "," + cy);
-		toCenter.animate({
-			path: reversedPath
-		}, 1000, ">", drawCircles);
-	}
-})();
 
 
 // delegate events

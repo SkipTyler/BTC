@@ -149,12 +149,13 @@
 			font-weight: 800;
 			line-height: 24px;
 			padding-bottom: 28px;
+			color: #fa8266;
 			@media (max-width: 1024px) {
 				padding-bottom: 11px;
 			}
 		}
 		p {
-			color: #102442;
+			color: #ffffff;
 			font-family: $ff-Raleway;
 			font-size: 16px;
 			font-weight: 500;
@@ -162,9 +163,6 @@
 		}
 		&.text-1 {
 			left: 0;
-			span {
-				color: #e47872;
-			}
 			p {
 				color: #21c1b3;
 			}
@@ -183,9 +181,6 @@
 		}
 		&.text-2 {
 			left: 16.6%;
-			span {
-				color: #c66e8a;
-			}
 			p {
 				color: #21c1b3;
 			}
@@ -206,9 +201,6 @@
 		}
 		&.text-3 {
 			left: 33.3%;
-			span {
-				color: #a162a9;
-			}
 			@media (max-width: 1024px) {
 				left:  60px;
 				top: 33.3%;
@@ -224,9 +216,6 @@
 		}
 		&.text-4 {
 			left: 49.9%;
-			span {
-				color: #7d57c7;
-			}
 			@media (max-width: 1024px) {
 				left: auto;
 				right: 60px;
@@ -244,9 +233,6 @@
 		}
 		&.text-5 {
 			left: 66.5%;
-			span {
-				color: #5f4de0;
-			}
 			@media (max-width: 1024px) {
 				left: 60px;
 				top: 66.5%;
@@ -262,9 +248,6 @@
 		}
 		&.text-6 {
 			right: 0;
-			span {
-				color: #5f4de0;
-			}
 			@media (max-width: 1024px) {
 				right: 60px;
 				bottom: 0;
@@ -280,7 +263,7 @@
 	}
 	&--title {
 		text-align: center;
-		color: #102442;
+		color: #ffffff;
 		font-family: $ff-Raleway;
 		font-size: 60px;
 		font-weight: 900;
@@ -314,7 +297,6 @@
 				display: flex;
 				align-items: center;
 				font-family: $ff-Raleway;
-				color: #102442;
 				font-size: 18px;
 				@media (max-width: 530px) {
 					font-size: 17px;
@@ -323,6 +305,7 @@
 					width: 232px;
 					font-weight: 600;
 					line-height: 36px;
+					color: #fa8266;
 					@media (max-width: 1024px) {
 						width: 152px;
 					}
@@ -336,6 +319,7 @@
 				}
 				span {
 					font-weight: 500;
+					color: #ffffff;
 				}
 			}
 		}
@@ -349,14 +333,14 @@
 				padding-top: 30px;
 			}
 			h5 {
-				color: #102442;
+				color: #fa8266;
 				font-family: $ff-Raleway;
 				font-weight: 900;
 				font-size: 36px;
 				padding-bottom: 28px;
 			}
 			p {
-				color: #102442;
+				color: #ffffff;
 				font-family: $ff-Raleway;
 				font-weight: 500;
 				line-height: 24px;
@@ -372,7 +356,6 @@
 		}
 	}
 	&--wrap {
-		background-color: #ffffff;
 		padding-top: 143px;
 		padding-bottom: 150px;
 	}
