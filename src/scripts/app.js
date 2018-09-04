@@ -103,9 +103,48 @@ document.addEventListener('DOMContentLoaded', function () {
         item.classList.add('load');
     }
 
-    // colors animation
+	let circle1 = circles[0].querySelectorAll('circle');
+	let circle2 = circles[1].querySelectorAll('circle');
+    let i = 3;
+    let j = 1;
+    const text1 = ['Shared services (20%)', 'Masternode coins (30%)', 'Masternode configuration (35%)', 'Other (15%)'];
+    const text2 = ['Dash (60%)', 'Other (40%)'];
 
-});
+    setInterval(() => {
+    	console.log(circle1[i]);
+    	for (let sect of circle1) {
+    		sect.classList.remove('selected');
+		}
+
+        for (let sector of circle2) {
+            sector.classList.remove('selected');
+        }
+
+		circle1[i].classList.add('selected');
+		circle2[j].classList.add('selected');
+
+		setTimeout(() => {
+            circles[0].querySelector('p').textContent = text1[3 - i];
+            circles[1].querySelector('p').textContent = text2[1 - j];
+		}, 200);
+
+    	if (i === 0) {
+    		i = 3;
+		}
+		else {
+			i--;
+		}
+
+        if (j === 0) {
+            j = 1;
+        }
+        else {
+            j--;
+        }
+
+    }, 2500);
+})
+
 // mobile menu
 (() => {
 	const _menuBtn = document.querySelector('.js-menuBtn');

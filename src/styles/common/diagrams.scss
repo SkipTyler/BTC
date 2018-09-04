@@ -35,22 +35,41 @@
   }
 
   .diagrams_image {
+    position: relative;
     @media only screen and (max-width: 680px) {
       width: 100%;
       display: flex;
       justify-content: center;
     }
 
-      .donut {
-        height: 570px;
-        width: 570px;
-        -webkit-filter: drop-shadow(6px 64px 9px rgba(0, 0, 0, 0.15));
-        filter: drop-shadow(6px 64px 9px rgba(0, 0, 0, 0.15));
-        @media only screen and (max-width: 680px) {
-          height: 310px;
-          width: 310px;
-        }
+    .donut {
+      height: 570px;
+      width: 570px;
+      -webkit-filter: drop-shadow(6px 64px 9px rgba(0, 0, 0, 0.15));
+      filter: drop-shadow(6px 64px 9px rgba(0, 0, 0, 0.15));
+      transform: rotate(-90deg);
+      @media only screen and (max-width: 680px) {
+        height: 310px;
+        width: 310px;
       }
+
+      circle {
+        transition: all .5s linear;
+      }
+      .selected {
+        stroke-width: 4;
+      }
+    }
+
+    p {
+      color: #ffffff;
+      font: 400 36px $ff-Raleway;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   .diagrams_desc_right {
