@@ -22,14 +22,6 @@
 			width: 45%;
 			margin-bottom: 40px;
 		}
-		&-title {
-			color: #ffffff;
-			font-family: $ff-Raleway;
-			font-size: 14px;
-			font-weight: 600;
-			line-height: 1;
-			padding-bottom: 17px;
-		}
 		&-box {
 			width: 100%;
 			box-shadow: 0 4px 21px 2px rgba(0, 0, 0, 0.15);
@@ -310,7 +302,7 @@
 		}
 	}
 	&--wrap {
-		padding-top: 86px;
+		padding-top: 56px;
 		@media (max-width: 768px) {
 			padding-top: 20px;
 		}

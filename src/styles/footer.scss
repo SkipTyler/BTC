@@ -30,9 +30,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
 
       .twitter,
-      .unknown, {
+      .unknown {
         background: url("../images/sprite.png");
         height: 41px;
         width: 41px;
