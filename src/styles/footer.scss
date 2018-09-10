@@ -32,11 +32,37 @@
       justify-content: center;
 
       .twitter,
-      .unknown {
+      .unknown, {
         background: url("../images/sprite.png");
         height: 41px;
         width: 41px;
         margin-right: 10px;
+      }
+
+      .face,
+      .menu,
+      .btc,
+      .mail {
+        background: url("../images/new_sprite.png");
+        height: 41px;
+        width: 41px;
+        margin-right: 10px;
+      }
+
+      .btc {
+        background-position: 213px -17px;
+      }
+
+      .mail {
+        background-position: 162px -17px;
+      }
+
+      .face {
+        background-position: 114px -17px;
+      }
+
+      .menu {
+        background-position: 64px -17px;
       }
 
       .twitter {
