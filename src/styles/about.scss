@@ -99,6 +99,9 @@
 						right: 0;
 						padding-left: 11px;
 						padding-top: 21px;
+						@media (max-width: 1024px) {
+							width: 100%;
+						}
 						main,
 						.container {
 							display: flex;

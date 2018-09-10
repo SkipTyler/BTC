@@ -43,8 +43,8 @@
     }
 
     .donut {
-      height: 570px;
-      width: 570px;
+      height: 410px;
+      width: 410px;
       -webkit-filter: drop-shadow(6px 64px 9px rgba(0, 0, 0, 0.15));
       filter: drop-shadow(6px 64px 9px rgba(0, 0, 0, 0.15));
       transform: rotate(-90deg);
@@ -75,7 +75,7 @@
   .diagrams_desc_right {
     align-items: flex-end;
     text-align: right;
-    padding-left: 200px;
+    padding-left: 90px;
     padding-right: 0;
     @media only screen and (max-width: 1024px) {
       padding-left: 50px;

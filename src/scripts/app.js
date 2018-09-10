@@ -87,7 +87,7 @@ const delegate = (criteria, listener) => {
 			if (distance < 0) clearInterval(x);
 		}, second);
 	};
-	timer('.js-timer', 'July 25, 2019 00:00:00');
+	timer('.js-timer', 'October 4, 2018 23:59:99');
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -95,9 +95,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const load = document.querySelectorAll('.plan_item_info_loading');
 
     // rotate animation
-    for (let circle of circles) {
-        circle.classList.add('scale');
-    }
 
     for (let item of load) {
         item.classList.add('load');
@@ -111,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const text2 = ['Dash (60%)', 'Other (40%)'];
 
     setInterval(() => {
-    	console.log(circle1[i]);
     	for (let sect of circle1) {
     		sect.classList.remove('selected');
 		}
@@ -142,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
             j--;
         }
 
-    }, 2500);
+    }, 1500);
 })
 
 // mobile menu
