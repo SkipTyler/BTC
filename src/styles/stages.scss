@@ -302,12 +302,12 @@
 		}
 	}
 	&--wrap {
-		padding-top: 56px;
+		padding-top: 76px;
 		@media (max-width: 768px) {
-			padding-top: 20px;
+			padding-top: 30px;
 		}
 		@media (max-width: 400px) {
-			padding-top: 0;
+			padding-top: 10px;
 		}
 	}
 }

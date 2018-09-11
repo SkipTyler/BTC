@@ -90,6 +90,47 @@ const delegate = (criteria, listener) => {
 // 	timer('.js-timer', 'October 4, 2018 23:59:99');
 // })();
 
+
+// mobile menu
+(() => {
+	const _menuBtn = document.querySelector('.js-menuBtn');
+	const _menu = document.querySelector('.js-menu');
+	const _menuLink = document.querySelectorAll('.js-menuLink');
+
+	_menuBtn.addEventListener('click', ev => {
+		ev.preventDefault();
+		const _target = ev.target || ev.currentTarget;
+		_target.classList.toggle('active');
+		_menu.classList.toggle('active');
+	});
+
+	Array.prototype.forEach.call(_menuLink, el => {
+		el.addEventListener('click', () => {
+			if (window.innerWidth <= 1200) {
+				_menuBtn.classList.remove('active');
+				_menu.classList.remove('active');
+			}
+		})
+	})
+})();
+
+(() => {
+	const rewardBtn = document.querySelector('.js-rewardBtn');
+	const reward = document.querySelector('.js-reward');
+	const rewardClose = document.querySelector('.close-reward');
+
+	rewardBtn.addEventListener('click', ev => {
+		ev.preventDefault();
+		reward.classList.add('active');
+	});
+
+	rewardClose.addEventListener('click', ev => {
+		ev.preventDefault();
+		reward.classList.remove('active');
+	});
+
+})();
+
 document.addEventListener('DOMContentLoaded', function () {
     const circles = document.querySelectorAll('.diagrams_image');
     const load = document.querySelectorAll('.plan_item_info_loading');
@@ -140,27 +181,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }, 1500);
 })
-
-// mobile menu
-(() => {
-	const _menuBtn = document.querySelector('.js-menuBtn');
-	const _menu = document.querySelector('.js-menu');
-	const _menuLink = document.querySelectorAll('.js-menuLink');
-
-	_menuBtn.addEventListener('click', ev => {
-		ev.preventDefault();
-		const _target = ev.target || ev.currentTarget;
-		_target.classList.toggle('active');
-		_menu.classList.toggle('active');
-	});
-	
-	Array.prototype.forEach.call(_menuLink, el => {
-		el.addEventListener('click', () => {
-			if (window.innerWidth <= 1200) {
-				_menuBtn.classList.remove('active');
-				_menu.classList.remove('active');
-			}
-		})
-	})
-})();
-
